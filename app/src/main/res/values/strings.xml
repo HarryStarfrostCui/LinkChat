@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Link Chat</string>
+    <string name="ButtonSomething">"submit "</string>
+    <string name="thisistheresource">where we enter our shit</string>
+    <string name="doUJustDoYou">"your Chat Name "</string>
+    <string name="category">enter course category</string>
+    <string name="number">enter course number</string>
+    <string name="link">enter your group link</string>
 </resources>
