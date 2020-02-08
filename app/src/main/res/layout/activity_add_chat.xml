@@ -97,4 +97,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.616" />
 
+    <EditText
+        android:id="@+id/editDescription"
+        android:layout_width="247dp"
+        android:layout_height="96dp"
+        android:ems="10"
+        android:hint="description"
+        android:inputType="textMultiLine"
+        android:maxLength="250"
+        android:maxLines="3"
+        android:scrollHorizontally="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.763" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

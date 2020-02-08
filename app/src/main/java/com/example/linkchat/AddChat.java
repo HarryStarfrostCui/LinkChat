@@ -22,6 +22,7 @@ public class AddChat extends AppCompatActivity {
         EditText editOfCourseCategory;
         EditText editOfCourseNumber;
         EditText editOfLink;
+        EditText editDescri;
         //date , platform
         //upper case course category
         // make sure descrption has  ascorlling part :<<<<
@@ -38,16 +39,17 @@ public class AddChat extends AppCompatActivity {
         String chatName  = editOfChatName.getText().toString().trim();
 
         editOfCourseCategory = (EditText) findViewById(R.id.editCouCatg);
-        String courseCategory = editOfCourseCategory.getText().toString().trim();
+        String courseCategory = editOfCourseCategory.getText().toString().trim().toUpperCase();
 
         //make this a number for easy comparision
         editOfCourseNumber = (EditText) findViewById(R.id.editCourNum);
         String courseNumber = editOfCourseNumber.getText().toString().trim();
 
         editOfLink = (EditText) findViewById(R.id.editLink);
-        String Link = editOfLink.getText().toString().trim();
+        String link = editOfLink.getText().toString().trim();
 
-
+        editDescri = (EditText) findViewById(R.id.editDescription);
+        String description = editDescri.getText().toString().trim();
         // if its between 1 and 8 accept if not dont
 
         //come back here after u finish with making 4 empty text locations
