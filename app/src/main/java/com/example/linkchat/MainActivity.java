@@ -7,10 +7,10 @@ import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
 
+import com.example.linkchat.fragments.ClassFragment;
 import com.example.linkchat.fragments.OpeningFragment;
 import com.example.linkchat.object.CourseAdapter;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     private ImageView mAddChat;
     private ExpandableListView mCourseMenu;
     private CourseAdapter mAdapter;
+    ArrayList<String> courseGroups;
+    HashMap<String, ArrayList<String>> courseMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
         mAddChat = findViewById(R.id.main_add_chat);
         mCourseMenu = findViewById(R.id.main_menu);
 
-        ArrayList<String> courseGroups = new ArrayList<>(Arrays.asList("CMPT","IAT","MACM","MATH"));
-        HashMap<String, ArrayList<String>> courseMap = new HashMap<>();
+        courseGroups = new ArrayList<>(Arrays.asList("CMPT","IAT","MACM","MATH"));
+        courseMap = new HashMap<>();
 
         courseMap.put("CMPT", new ArrayList<String>(Arrays.asList("Official","120","125","225","295")));
         courseMap.put("MACM", new ArrayList<String>(Arrays.asList("Official","101","201","316")));
@@ -46,6 +48,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // open intent to add-class activity
+            }
+        });
+        mCourseMenu.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i1, long l) {
+                getSupportFragmentManager().beginTransaction().replace(
+                        R.id.main_container, ClassFragment.newInstance(courseMap.get(courseGroups.get(i))
+                                .get(i1))).commit();
+                return true;
             }
         });
     }
