@@ -21,3 +21,5 @@
 
 ## What's next for LinkChat?
 - put more features in and make it more user-friendly
+
+![Check out our devpost](https://devpost.com/software/linkchat)
