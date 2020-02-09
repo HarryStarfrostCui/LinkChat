@@ -66,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i1, long l) {
                 getSupportFragmentManager().beginTransaction().replace(
-                        R.id.main_container, ClassFragment.newInstance(courseMap.get(courseGroups.get(i))
-                                .get(i1))).commit();
+                        R.id.main_container, ClassFragment.newInstance(courseGroups.get(i), courseMap.get(courseGroups.get(i))
+                                .get(i1), mDatabase)).commit();
                 return true;
             }
         });
@@ -104,8 +104,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        mAdapter.notifyDataSetChanged();
     }
 
     @Override
