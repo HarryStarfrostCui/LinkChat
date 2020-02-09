@@ -75,20 +75,22 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.214" />
     //Chat creation date value from database
+    //Chat name from database
+
     <TextView
         android:id="@+id/dateLink"
-        android:layout_width="127dp"
-        android:layout_height="23dp"
+        android:layout_width="129dp"
+        android:layout_height="19dp"
         android:ems="10"
         android:inputType="date"
         android:text=" "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintHorizontal_bias="0.712"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.209" />
-    //Chat name from database
+        app:layout_constraintVertical_bias="0.213" />
+
     <TextView
         android:id="@+id/chatName"
         android:layout_width="162dp"
@@ -133,6 +135,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Report"
+        android:background="#22C696"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.173"

@@ -1,12 +1,16 @@
 package com.example.linkchat;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Calendar;
+
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -43,11 +47,21 @@ public class DescriptionActivity extends AppCompatActivity {
         descriptionBox.setText("Description: ");
         TextView chatDescription = (TextView) findViewById(R.id.descriptionLink);
         chatDescription.setText(" ");
-        Button Report = (Button) findViewById(R.id.report);
-        Report.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
+        //Button to report
+        Button report = (Button) findViewById(R.id.report);
+        report.setOnClickListener(new View.OnClickListener() {
+          @Override
+          //  View checkBoxView = View.inflate(this, R.layout.checkbox, null);
+            //CheckBox checkBox = (CheckBox) checkBoxView.findViewById(R.id.checkbox);
+            public void onClick(View v) {
+                AlertDialog alertDialog = new AlertDialog.Builder(DescriptionActivity.this).create(); //Read Update
+                alertDialog.setTitle("Report");
+                alertDialog.setMessage("A problem has been reported with the link for the group chat! ");
+               // alertDialog.setView(checkBoxView);
+                //selectedItems = new ArrayList();  // Where we track the selected items
+              //AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                alertDialog.show();
             }
         });
 
