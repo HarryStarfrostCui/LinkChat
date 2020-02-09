@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.linkchat.R;
 import com.example.linkchat.object.CourseAdapter;
+import com.google.firebase.database.DatabaseReference;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,6 +27,7 @@ public class ClassFragment extends Fragment {
     ArrayList<String> mChatGroup;
     HashMap<String, ArrayList<String>> mChatItems;
     CourseAdapter mAdapter;
+    DatabaseReference mDatabase;
 
     public static ClassFragment newInstance(String path) {
 
