@@ -6,4 +6,9 @@
     <string name="category">enter course category</string>
     <string name="number">enter course number</string>
     <string name="link">enter your group link</string>
+
+    <string-array name="platforms">
+        <item>Discord</item>
+        <item>FaceBook</item>
+    </string-array>
 </resources>
